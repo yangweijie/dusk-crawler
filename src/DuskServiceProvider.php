@@ -5,12 +5,10 @@ namespace DuskCrawler;
 use Illuminate\Console\Application as Artisan;
 use Illuminate\Support\ServiceProvider;
 use Laravel\Dusk\Browser;
-use Orchestra\Canvas\Core\CommandsProvider;
 
 class DuskServiceProvider extends ServiceProvider
 {
-    use CommandsProvider,
-        Concerns\RegisterMacros;
+    use Concerns\RegisterMacros;
 
     /**
      * Register services.
