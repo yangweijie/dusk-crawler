@@ -29,11 +29,5 @@ class DuskServiceProvider extends ServiceProvider
     {
         Browser::$storeScreenshotsAt = \storage_path('app/Browser/screenshots');
         Browser::$storeConsoleLogAt = \storage_path('logs');
-
-        if ($this->app->runningInConsole()) {
-            Artisan::starting(static function ($artisan) {
-                $artisan->add(new Console\InstallCommand());
-            });
-        }
     }
 }
