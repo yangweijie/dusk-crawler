@@ -31,12 +31,8 @@ class DuskServiceProvider extends ServiceProvider
         Browser::$storeConsoleLogAt = \storage_path('logs');
 
         if ($this->app->runningInConsole()) {
-            $preset = $this->presetForLaravel($this->app);
-
-            Artisan::starting(static function ($artisan) use ($preset) {
+            Artisan::starting(static function ($artisan) {
                 $artisan->add(new Console\InstallCommand());
-                $artisan->add(new Console\ComponentCommand($preset));
-                $artisan->add(new Console\PageCommand($preset));
             });
         }
     }
