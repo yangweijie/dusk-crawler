@@ -1,5 +1,5 @@
 {
-    "name": "katsana/dusk-crawler",
+    "name": "yangweijie/dusk-crawler",
     "description": "Web Crawler using Laravel Dusk",
     "type": "library",
     "license": "MIT",
